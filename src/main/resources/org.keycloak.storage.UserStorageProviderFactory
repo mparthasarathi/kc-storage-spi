@@ -1,1 +1,1 @@
-uk.gov.hmpo.hybdidm.keycloak.storage.RemoteKeycloakUserStorageProviderFactory
+com.example.kc.storage.spi.RemoteKeycloakUserStorageProviderFactory
