@@ -18,17 +18,6 @@
 		<maven.compiler.release>17</maven.compiler.release>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-	<scm>
-		<developerConnection>scm:git:ssh://git@bitbucket.bics-collaboration.homeoffice.gov.uk/hybdidm/keycloak-federation-plugin.git</developerConnection>
-	</scm>
-
-	<distributionManagement>
-		<repository>
-			<id>ho-pla-codeartifact-releases</id>
-			<name>ho-pla-codeartifact-releases</name>
-			<url>https://ho-pla-codeartifact-113355358853.d.codeartifact.eu-west-1.amazonaws.com/maven/releases/</url>
-		</repository>
-	</distributionManagement>
 
 	<dependencies>
 		<dependency>
