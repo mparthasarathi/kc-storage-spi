@@ -1,0 +1,22 @@
+---
+version: "3.9"
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:21.1.1
+    container_name: keycloak-external
+    ports:
+      - "8080:8080"
+      - "8787:8787"
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: password
+      DRSR_CLIENT_SECRET: "my-client-secret"
+      KC_LOG_LEVEL: info
+      KC_LOG_CONSOLE_COLOR: 'true'
+      KC_HEALTH_ENABLED: 'true'
+      DEBUG: 'true'
+      DEBUG_PORT: '*:8787'
+    command:
+      - start-dev
+    volumes:
+      - ./target/kc-storage-spi-0.0.1-jar-with-dependencies.jar:/opt/keycloak/providers/kc-storage-spi-0.0.1-jar-with-dependencies.jar
